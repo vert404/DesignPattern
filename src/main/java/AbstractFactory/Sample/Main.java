@@ -12,8 +12,8 @@ public class Main {
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Usage: java Main class.name.of.ConcreteFactory");
-            System.out.println("Example 1: java Main listfactory.ListFactory");
-            System.out.println("Example 2: java Main tablefactory.TableFactory");
+            System.out.println("Example 1: AbstractFactory.Sample.listfactory.ListFactory");
+            System.out.println("Example 2: AbstractFactory.Sample.tablefactory.TableFactory");
             System.exit(0);
         }
 
@@ -40,7 +40,8 @@ public class Main {
         traysearch.add(excite);
         traysearch.add(google);
 
-        Page page = factory.createPage("LinkPage", "杨文轩");
+        //Page page = factory.createPage("LinkPage", "杨文轩");
+        Page page = factory.createPage("TablePage", "杨文轩");
         page.add(traynews);
         page.add(traysearch);
         page.output();
