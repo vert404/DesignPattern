@@ -22,7 +22,7 @@ public abstract class Page {
     public void output() {
         try {
             String filename = title + ".html";
-            Writer writer = new FileWriter(filename);
+            Writer writer = new FileWriter(System.getProperty("user.dir")+"\\src\\main\\java\\AbstractFactory\\A2\\"+filename);
             writer.write(this.makeHTML());
             writer.close();
             System.out.println(filename + " 编写完成。");
